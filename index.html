@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Alex Chen - Machine Learning Researcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Times New Roman"', 'Times', 'serif'],
+              mono: ['"Courier New"', 'Courier', 'monospace'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: 0, transform: 'translateY(15px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: #ffffff;
+        color: #000000;
+        line-height: 1.6; /* Increased line-height slightly for larger text */
+      }
+      a {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+      }
+      a:hover {
+        background-color: #ffffcc; /* Classic academic highlight */
+        text-decoration: none;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Brutalist/Basic Button reset */
+      button {
+        border-radius: 0 !important;
+      }
+      input {
+        border-radius: 0 !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white text-black font-serif antialiased text-lg">
+    
+    <!-- Main Container: max-w-2xl -->
+    <div class="max-w-2xl mx-auto px-6 py-12 md:py-20">
+      
+      <!-- Header / Bio -->
+      <header class="mb-14 animate-fade-in-up" style="animation-delay: 0ms;">
+        <h1 class="text-4xl md:text-5xl font-bold mb-3 text-black tracking-tight leading-tight">
+          Dr. Alex Chen
+        </h1>
+        <p class="text-xl italic text-neutral-700 mb-8">
+          Machine Learning Researcher
+        </p>
+        
+        <div class="text-lg text-black mb-8 max-w-none leading-relaxed">
+          <p class="mb-4">
+            This is the homepage of Dr. Alex Chen. I am a researcher focused on the intersection of deep generative models and interpretability. Currently building scalable systems for unsupervised representation learning. 
+          </p>
+          <p>
+            If you hoped to find something else here, please <a href="mailto:alex.chen@example.com" class="text-blue-900">email me</a> and I will get back to you.
+          </p>
+        </div>
+
+        <div class="flex gap-4 text-base font-mono">
+          <a href="https://github.com" target="_blank" class="text-blue-900 hover:bg-yellow-100">[GitHub]</a>
+          <a href="https://twitter.com" target="_blank" class="text-blue-900 hover:bg-yellow-100">[Twitter]</a>
+          <a href="https://scholar.google.com" target="_blank" class="text-blue-900 hover:bg-yellow-100">[Scholar]</a>
+          <a href="mailto:alex.chen@example.com" class="text-blue-900 hover:bg-yellow-100">[Email]</a>
+        </div>
+      </header>
+
+      <!-- Projects Section -->
+      <section>
+        <div class="border-b border-black mb-10 pb-2 animate-fade-in-up" style="animation-delay: 100ms;">
+           <h2 class="text-2xl font-bold uppercase tracking-wide">Selected Publications</h2>
+        </div>
+       
+        <div class="space-y-10">
+          
+          <!-- Project 1 -->
+          <div class="group animate-fade-in-up opacity-0 flex flex-col md:flex-row gap-6 items-start" style="animation-delay: 150ms;">
+             <!-- Thumbnail -->
+             <div class="w-28 h-24 md:w-36 md:h-28 flex-shrink-0 border border-black bg-neutral-100 mt-1.5">
+                <img 
+                  src="https://placehold.co/800x600/eeeeee/000000?text=Molecule" 
+                  alt="Latent Diffusion"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+             </div>
+             <!-- Content -->
+             <div class="flex-1">
+               <h3 class="text-xl md:text-2xl font-bold text-black leading-tight mb-2">
+                 <a href="#" class="text-blue-900 hover:no-underline">Latent Diffusion for Molecular Geometry</a>
+               </h3>
+               <div class="text-base text-neutral-600 mb-2">
+                 Alex Chen, Jane Doe, et al. <span class="font-bold text-black">ICLR 2024</span>
+               </div>
+               <p class="text-black text-base leading-relaxed mb-3">
+                 A novel generative framework for predicting 3D molecular conformers using SE(3)-equivariant diffusion models. Achieved state-of-the-art results on the GEOM-Drugs dataset.
+               </p>
+               <div class="flex gap-3 text-sm font-mono text-neutral-600">
+                 <span class="border border-neutral-400 px-1 pt-0.5">PyTorch</span>
+                 <span class="border border-neutral-400 px-1 pt-0.5">Diffusion</span>
+                 <a href="#" class="border border-black px-1 pt-0.5 text-black hover:bg-black hover:text-white transition-colors">[PAPER]</a>
+               </div>
+             </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="group animate-fade-in-up opacity-0 flex flex-col md:flex-row gap-6 items-start" style="animation-delay: 300ms;">
+             <!-- Thumbnail -->
+             <div class="w-28 h-24 md:w-36 md:h-28 flex-shrink-0 border border-black bg-neutral-100 mt-1.5">
+                <img 
+                  src="https://placehold.co/800x600/eeeeee/000000?text=Attention" 
+                  alt="Sparse Attention"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+             </div>
+             <!-- Content -->
+             <div class="flex-1">
+               <h3 class="text-xl md:text-2xl font-bold text-black leading-tight mb-2">
+                 <a href="#" class="text-blue-900 hover:no-underline">Sparse Attention Transformers</a>
+               </h3>
+               <div class="text-base text-neutral-600 mb-2">
+                 Alex Chen, John Smith. <span class="font-bold text-black">NeurIPS 2023</span>
+               </div>
+               <p class="text-black text-base leading-relaxed mb-3">
+                 Proposed a dynamic sparse attention mechanism that reduces quadratic complexity to linear for long-sequence DNA analysis.
+               </p>
+               <div class="flex gap-3 text-sm font-mono text-neutral-600">
+                 <span class="border border-neutral-400 px-1 pt-0.5">JAX</span>
+                 <span class="border border-neutral-400 px-1 pt-0.5">NLP</span>
+                 <a href="#" class="border border-black px-1 pt-0.5 text-black hover:bg-black hover:text-white transition-colors">[CODE]</a>
+               </div>
+             </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="group animate-fade-in-up opacity-0 flex flex-col md:flex-row gap-6 items-start" style="animation-delay: 450ms;">
+             <!-- Thumbnail Placeholder -->
+             <div class="w-28 h-24 md:w-36 md:h-28 flex-shrink-0 border border-black bg-neutral-50 flex items-center justify-center text-center p-1 mt-1.5">
+                <span class="text-xs font-mono leading-tight">Video Segmentation</span>
+             </div>
+             <!-- Content -->
+             <div class="flex-1">
+               <h3 class="text-xl md:text-2xl font-bold text-black leading-tight mb-2">
+                 <a href="#" class="text-blue-900 hover:no-underline">Unsupervised Video Segmentation</a>
+               </h3>
+               <div class="text-base text-neutral-600 mb-2">
+                 Alex Chen. <span class="font-bold text-black">CVPR 2023 (Workshop)</span>
+               </div>
+               <p class="text-black text-base leading-relaxed mb-3">
+                 Self-supervised learning pipeline for segmenting moving objects in video without human annotations, utilizing optical flow consistency.
+               </p>
+               <div class="flex gap-3 text-sm font-mono text-neutral-600">
+                 <span class="border border-neutral-400 px-1 pt-0.5">CV</span>
+                 <a href="#" class="border border-black px-1 pt-0.5 text-black hover:bg-black hover:text-white transition-colors">[PROJECT PAGE]</a>
+               </div>
+             </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="group animate-fade-in-up opacity-0 flex flex-col md:flex-row gap-6 items-start" style="animation-delay: 600ms;">
+             <!-- Thumbnail -->
+             <div class="w-28 h-24 md:w-36 md:h-28 flex-shrink-0 border border-black bg-neutral-100 mt-1.5">
+                <img 
+                  src="https://placehold.co/800x600/eeeeee/000000?text=Sim2Real" 
+                  alt="RL in Robotics"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+             </div>
+             <!-- Content -->
+             <div class="flex-1">
+               <h3 class="text-xl md:text-2xl font-bold text-black leading-tight mb-2">
+                 <a href="#" class="text-blue-900 hover:no-underline">Reinforcement Learning in Robotics</a>
+               </h3>
+               <div class="text-base text-neutral-600 mb-2">
+                 Alex Chen, A. Turing. <span class="font-bold text-black">ICRA 2022</span>
+               </div>
+               <p class="text-black text-base leading-relaxed mb-3">
+                 Sim2Real transfer learning for quadruped locomotion over rough terrain. Implemented PPO with domain randomization.
+               </p>
+               <div class="flex gap-3 text-sm font-mono text-neutral-600">
+                 <span class="border border-neutral-400 px-1 pt-0.5">Robotics</span>
+                 <span class="border border-neutral-400 px-1 pt-0.5">Python</span>
+                 <a href="#" class="border border-black px-1 pt-0.5 text-black hover:bg-black hover:text-white transition-colors">[PDF]</a>
+               </div>
+             </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-24 pt-8 border-t border-black text-center text-black text-sm animate-fade-in-up" style="animation-delay: 750ms;">
+        <p>Last updated: October 2024. <br/> &copy; Dr. Alex Chen.</p>
+      </footer>
+    </div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
